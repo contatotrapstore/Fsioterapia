@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import clsx from 'clsx';
 import { NAV_LINKS, SITE_CONFIG } from '@/lib/constants';
 import Button from '@/components/ui/Button';
@@ -28,16 +29,27 @@ export default function Header() {
             : 'bg-transparent'
         )}
       >
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
           {/* Logo / Brand */}
-          <a
-            href="#hero"
-            className={clsx(
-              'font-heading text-xl font-bold transition-colors duration-300',
-              isScrolled ? 'text-primary-800' : 'text-white'
-            )}
-          >
-            {SITE_CONFIG.name}
+          <a href="#hero" className="flex items-center gap-3">
+            <Image
+              src="/images/logo.png"
+              alt="KC Fisioterapia Domiciliar"
+              width={40}
+              height={40}
+              className={clsx(
+                'h-10 w-auto transition-all duration-300',
+                !isScrolled && 'brightness-0 invert'
+              )}
+            />
+            <span
+              className={clsx(
+                'hidden font-heading text-lg font-bold transition-colors duration-300 sm:block',
+                isScrolled ? 'text-primary-800' : 'text-white'
+              )}
+            >
+              {SITE_CONFIG.name}
+            </span>
           </a>
 
           {/* Desktop Navigation */}

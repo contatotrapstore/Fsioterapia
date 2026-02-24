@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import { SITE_CONFIG } from '@/lib/constants';
 
@@ -5,54 +6,112 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-primary-900"
+      className="relative min-h-screen overflow-hidden bg-primary-900"
     >
-      {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary-950/80 via-primary-900/60 to-primary-900" />
+      {/* Background photo with overlay */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/kelly-hero.avif"
+          alt="Fisioterapia domiciliar"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-primary-950/75" />
+      </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-3xl px-4 py-32 text-center sm:px-6">
-        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/80 backdrop-blur-sm">
-          <span className="h-2 w-2 rounded-full bg-primary-400" />
-          {SITE_CONFIG.title}
-        </div>
+      <div className="relative z-10 mx-auto flex max-w-7xl items-center px-4 sm:px-6 lg:px-8">
+        <div className="grid w-full items-center gap-12 py-32 md:grid-cols-2 lg:gap-16 lg:py-40">
+          {/* Text side */}
+          <div>
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/80 backdrop-blur-sm">
+              <span className="h-2 w-2 rounded-full bg-primary-400" />
+              {SITE_CONFIG.title}
+            </div>
 
-        <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-          Fisioterapia Domiciliar
-          <br />
-          <span className="text-white/90">Humanizada</span>
-        </h1>
+            <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+              Fisioterapia
+              <br />
+              Domiciliar
+              <br />
+              <span className="text-white/90">Humanizada</span>
+            </h1>
 
-        <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/70 sm:text-xl">
-          Sou <strong className="text-white">{SITE_CONFIG.name}</strong>,
-          fisioterapeuta especializada em atendimento domiciliar.
-          Reabilitação, mobilidade e qualidade de vida no conforto do seu lar.
-        </p>
+            <p className="mt-6 max-w-lg text-lg leading-relaxed text-white/70">
+              Sou <strong className="text-white">Dra. {SITE_CONFIG.name}</strong>,
+              fisioterapeuta especializada em atendimento domiciliar.
+              Reabilitação, mobilidade e qualidade de vida no conforto do seu lar.
+            </p>
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button href={SITE_CONFIG.whatsappUrl} variant="whatsapp" size="lg">
-            <WhatsAppIcon />
-            Agendar pelo WhatsApp
-          </Button>
-          <Button href="#servicos" variant="secondary" size="lg">
-            Conheça Meus Serviços
-          </Button>
-        </div>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <Button href={SITE_CONFIG.whatsappUrl} variant="whatsapp" size="lg">
+                <WhatsAppIcon />
+                Agendar pelo WhatsApp
+              </Button>
+              <Button href="#servicos" variant="secondary" size="lg">
+                Conheça Meus Serviços
+              </Button>
+            </div>
 
-        {/* Trust line */}
-        <div className="mt-16 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-white/50">
-          <span className="flex items-center gap-2">
-            <CheckIcon />
-            Atendimento humanizado
-          </span>
-          <span className="flex items-center gap-2">
-            <CheckIcon />
-            Profissional registrada
-          </span>
-          <span className="flex items-center gap-2">
-            <CheckIcon />
-            {SITE_CONFIG.city} e região
-          </span>
+            {/* Trust line */}
+            <div className="mt-12 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/50">
+              <span className="flex items-center gap-2">
+                <CheckIcon />
+                Atendimento humanizado
+              </span>
+              <span className="flex items-center gap-2">
+                <CheckIcon />
+                Profissional registrada
+              </span>
+              <span className="flex items-center gap-2">
+                <CheckIcon />
+                {SITE_CONFIG.city} e região
+              </span>
+            </div>
+          </div>
+
+          {/* Photo grid side */}
+          <div className="hidden md:block">
+            <div className="grid grid-cols-2 gap-3">
+              <div className="space-y-3">
+                <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
+                  <Image
+                    src="/images/fisioterapia-idoso.jpg"
+                    alt="Fisioterapia domiciliar com idoso"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-square overflow-hidden rounded-xl">
+                  <Image
+                    src="/images/exercicio-equilíbrio.jpg"
+                    alt="Exercícios de equilíbrio"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+              <div className="mt-8 space-y-3">
+                <div className="relative aspect-square overflow-hidden rounded-xl">
+                  <Image
+                    src="/images/reabilitacao-andador.jpg"
+                    alt="Reabilitação motora"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
+                  <Image
+                    src="/images/tratamento-bicicleta.jpg"
+                    alt="Exercícios terapêuticos"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

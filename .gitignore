@@ -31,3 +31,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw source images (organized copies are in public/images/)
+/a948d3_*.jpg
+/a948d3_*.avif
+/16022024-*.avif
+/Kelly Fisio*.avif
+/Imagem do WhatsApp*.avif
+/logo.png
+/screencapture-*.png
+/LP.md
