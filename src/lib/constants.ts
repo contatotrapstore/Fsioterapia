@@ -1,16 +1,15 @@
-// TODO: Substituir pelos dados reais da profissional
 export const SITE_CONFIG = {
   name: 'Kelly Tina Peretti',
   title: 'Fisioterapeuta Domiciliar',
-  phone: '(00) 00000-0000', // TODO: Número real
-  whatsappNumber: '5500000000000', // TODO: Número real com código do país
-  whatsappUrl: 'https://api.whatsapp.com/send?phone=5500000000000&text=Ol%C3%A1%20Kelly%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o.', // TODO: Atualizar número
-  crefito: 'CREFITO-X/000000-F', // TODO: Número real do CREFITO
-  city: 'Sua Cidade', // TODO: Cidade real
-  state: 'UF', // TODO: Estado real
-  workingHours: 'Segunda a Sexta: 8h às 18h | Sábado: 8h às 12h',
-  siteUrl: 'https://fisioterapiaemcasa.com.br', // TODO: Domínio final
-  email: 'contato@fisioterapiaemcasa.com.br', // TODO: Email real
+  phone: '(41) 99611-1891',
+  whatsappNumber: '5541996111891',
+  whatsappUrl: 'https://api.whatsapp.com/send?phone=5541996111891&text=Ol%C3%A1%20Dra.%20Kelly%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20fisioterapia%20domiciliar.',
+  crefito: 'CREFITO-8/240457-F',
+  city: 'Curitiba',
+  state: 'PR',
+  workingHours: 'Horários a combinar',
+  siteUrl: 'https://fisioterapiaemcasa.com.br',
+  email: 'kellytinaperetti@yahoo.com.br',
 } as const;
 
 export const NAV_LINKS = [

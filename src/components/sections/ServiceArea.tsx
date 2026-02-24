@@ -40,23 +40,21 @@ export default function ServiceArea() {
             </h3>
 
             <p className="mt-4 text-neutral-600 leading-relaxed">
-              Atendo em <strong>{SITE_CONFIG.city}</strong> e região. Realizo
-              atendimento domiciliar em diversos bairros. Consulte a
-              disponibilidade para a sua localidade.
+              Atendo em diversas regiões de <strong>Curitiba</strong> e{' '}
+              <strong>Pinhais</strong>. Realizo atendimento domiciliar com
+              conforto e praticidade. Consulte a disponibilidade para a sua
+              localidade.
             </p>
 
-            {/* TODO: Substituir pelos bairros/regiões reais */}
             <div className="mt-6 flex flex-wrap justify-center gap-2">
-              {['Centro', 'Zona Norte', 'Zona Sul', 'Zona Leste', 'Zona Oeste'].map(
-                (region) => (
-                  <span
-                    key={region}
-                    className="rounded-full bg-white px-4 py-2 text-sm font-medium text-primary-700 shadow-sm"
-                  >
-                    {region}
-                  </span>
-                )
-              )}
+              {['Curitiba', 'Pinhais'].map((region) => (
+                <span
+                  key={region}
+                  className="rounded-full bg-white px-4 py-2 text-sm font-medium text-primary-700 shadow-sm"
+                >
+                  {region}
+                </span>
+              ))}
             </div>
 
             <p className="mt-6 text-sm text-primary-600 font-medium">
