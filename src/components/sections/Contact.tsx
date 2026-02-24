@@ -50,7 +50,7 @@ export default function Contact() {
               <Button
                 href={SITE_CONFIG.whatsappUrl}
                 variant="whatsapp"
-                size="lg"
+                size="md"
               >
                 <WhatsAppIcon />
                 Agendar pelo WhatsApp

@@ -102,7 +102,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <Button
               href={SITE_CONFIG.whatsappUrl}
               variant="whatsapp"
-              size="lg"
+              size="md"
               className="w-full"
             >
               Agendar pelo WhatsApp

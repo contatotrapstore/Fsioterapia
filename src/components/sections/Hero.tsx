@@ -36,11 +36,11 @@ export default function Hero() {
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Button href={SITE_CONFIG.whatsappUrl} variant="whatsapp" size="lg">
+              <Button href={SITE_CONFIG.whatsappUrl} variant="whatsapp" size="md">
                 <WhatsAppIcon />
                 Agendar pelo WhatsApp
               </Button>
-              <Button href="#servicos" variant="secondary" size="lg">
+              <Button href="#servicos" variant="secondary" size="md">
                 Conheça Meus Serviços
               </Button>
             </div>
