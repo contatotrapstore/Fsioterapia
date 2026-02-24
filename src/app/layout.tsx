@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_CONFIG.name}`,
   },
   description:
-    'Fisioterapia domiciliar humanizada. Atendimento em casa para idosos, pós-operatório, reabilitação e mobilidade. Agende sua avaliação pelo WhatsApp.',
+    'Fisioterapia domiciliar humanizada em Curitiba e Pinhais. Atendimento em casa para idosos, pós-operatório, reabilitação e mobilidade. Dra. Kelly Tina Peretti — CREFITO-8/240457-F. Agende pelo WhatsApp.',
   keywords: [
     'fisioterapia domiciliar',
     'fisioterapia em casa',
@@ -35,7 +35,10 @@ export const metadata: Metadata = {
     'fisioterapia pós-operatória',
     'reabilitação em casa',
     'fisioterapia ortopédica',
-    `fisioterapia em ${SITE_CONFIG.city}`,
+    'fisioterapia Curitiba',
+    'fisioterapeuta Curitiba',
+    'fisioterapia domiciliar Curitiba',
+    'fisioterapia Pinhais',
   ],
   authors: [{ name: SITE_CONFIG.name }],
   openGraph: {

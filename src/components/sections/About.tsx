@@ -11,13 +11,14 @@ export default function About() {
         <div className="grid items-center gap-12 md:grid-cols-2 lg:gap-16">
           {/* Photo */}
           <AnimateOnScroll>
-            <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden rounded-xl shadow-md">
+            <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-2xl shadow-md">
               <Image
                 src="/images/kelly-portrait.avif"
                 alt={`Dra. ${SITE_CONFIG.name} - Fisioterapeuta`}
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="384px"
+                unoptimized
               />
             </div>
           </AnimateOnScroll>

@@ -5,7 +5,6 @@ export interface Testimonial {
   rating: number;
 }
 
-// TODO: Substituir pelos depoimentos reais dos pacientes
 export const testimonials: Testimonial[] = [
   {
     quote:

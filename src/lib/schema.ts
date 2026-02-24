@@ -8,7 +8,8 @@ export const localBusinessSchema = {
     'Fisioterapia domiciliar humanizada. Atendimento em casa para idosos, pós-operatório, reabilitação e mobilidade.',
   url: SITE_CONFIG.siteUrl,
   telephone: SITE_CONFIG.phone,
-  image: `${SITE_CONFIG.siteUrl}/images/og-image.jpg`,
+  image: `${SITE_CONFIG.siteUrl}/images/og-image.svg`,
+  email: SITE_CONFIG.email,
   priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
@@ -16,11 +17,10 @@ export const localBusinessSchema = {
     addressRegion: SITE_CONFIG.state,
     addressCountry: 'BR',
   },
-  areaServed: {
-    '@type': 'City',
-    name: SITE_CONFIG.city,
-  },
-  openingHours: 'Mo-Fr 08:00-18:00, Sa 08:00-12:00',
+  areaServed: [
+    { '@type': 'City', name: 'Curitiba' },
+    { '@type': 'City', name: 'Pinhais' },
+  ],
   founder: {
     '@type': 'Person',
     name: SITE_CONFIG.name,

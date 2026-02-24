@@ -8,17 +8,8 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen overflow-hidden bg-primary-900"
     >
-      {/* Background photo with overlay */}
-      <div className="absolute inset-0">
-        <Image
-          src="/images/kelly-hero.avif"
-          alt="Fisioterapia domiciliar"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-primary-950/75" />
-      </div>
+      {/* Clean gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto flex max-w-7xl items-center px-4 sm:px-6 lg:px-8">
@@ -73,40 +64,48 @@ export default function Hero() {
 
           {/* Photo grid side */}
           <div className="hidden md:block">
-            <div className="grid grid-cols-2 gap-3">
-              <div className="space-y-3">
-                <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
+            <div className="mx-auto max-w-sm lg:max-w-md grid grid-cols-2 gap-4">
+              <div className="space-y-4">
+                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border-2 border-white/10">
                   <Image
                     src="/images/fisioterapia-idoso.jpg"
                     alt="Fisioterapia domiciliar com idoso"
                     fill
                     className="object-cover"
+                    sizes="200px"
+                    unoptimized
                   />
                 </div>
-                <div className="relative aspect-square overflow-hidden rounded-xl">
+                <div className="relative aspect-square overflow-hidden rounded-2xl border-2 border-white/10">
                   <Image
                     src="/images/exercicio-equilíbrio.jpg"
                     alt="Exercícios de equilíbrio"
                     fill
                     className="object-cover"
+                    sizes="200px"
+                    unoptimized
                   />
                 </div>
               </div>
-              <div className="mt-8 space-y-3">
-                <div className="relative aspect-square overflow-hidden rounded-xl">
+              <div className="mt-8 space-y-4">
+                <div className="relative aspect-square overflow-hidden rounded-2xl border-2 border-white/10">
                   <Image
                     src="/images/reabilitacao-andador.jpg"
                     alt="Reabilitação motora"
                     fill
                     className="object-cover"
+                    sizes="200px"
+                    unoptimized
                   />
                 </div>
-                <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
+                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border-2 border-white/10">
                   <Image
                     src="/images/tratamento-bicicleta.jpg"
                     alt="Exercícios terapêuticos"
                     fill
                     className="object-cover"
+                    sizes="200px"
+                    unoptimized
                   />
                 </div>
               </div>
