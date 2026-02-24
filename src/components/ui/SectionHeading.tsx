@@ -18,8 +18,8 @@ export default function SectionHeading({
       {subtitle && (
         <p
           className={clsx(
-            'text-sm font-semibold uppercase tracking-widest mb-2',
-            light ? 'text-primary-300' : 'text-primary-600'
+            'text-sm font-medium uppercase tracking-widest mb-3',
+            light ? 'text-primary-300/80' : 'text-primary-600'
           )}
         >
           {subtitle}
@@ -28,16 +28,16 @@ export default function SectionHeading({
       <h2
         className={clsx(
           'text-3xl md:text-4xl lg:text-5xl font-bold',
-          light ? 'text-white' : 'text-primary-800'
+          light ? 'text-white' : 'text-neutral-900'
         )}
       >
         {title}
       </h2>
       <div
         className={clsx(
-          'mt-4 h-1 w-20 rounded-full',
+          'mt-4 h-0.5 w-16 rounded-full',
           centered && 'mx-auto',
-          light ? 'bg-primary-400' : 'bg-primary-500'
+          light ? 'bg-primary-400/50' : 'bg-primary-600'
         )}
       />
     </div>

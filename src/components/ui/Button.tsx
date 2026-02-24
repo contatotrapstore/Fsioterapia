@@ -13,13 +13,13 @@ interface ButtonProps {
 
 const variantStyles = {
   primary:
-    'bg-primary-600 text-white hover:bg-primary-700 shadow-lg hover:shadow-xl',
+    'bg-primary-800 text-white hover:bg-primary-900',
   secondary:
-    'bg-white text-primary-800 border-2 border-white hover:bg-primary-50 hover:border-primary-100',
+    'bg-white/10 text-white border border-white/20 hover:bg-white/20',
   whatsapp:
-    'bg-whatsapp text-white hover:bg-whatsapp-dark shadow-lg hover:shadow-xl',
+    'bg-whatsapp text-white hover:bg-whatsapp-dark',
   outline:
-    'bg-transparent text-primary-700 border-2 border-primary-600 hover:bg-primary-50',
+    'bg-transparent text-primary-800 border border-primary-300 hover:bg-primary-50',
 };
 
 const sizeStyles = {
@@ -39,7 +39,7 @@ export default function Button({
   ariaLabel,
 }: ButtonProps) {
   const classes = clsx(
-    'inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-300 cursor-pointer',
+    'inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-all duration-200 cursor-pointer',
     variantStyles[variant],
     sizeStyles[size],
     className

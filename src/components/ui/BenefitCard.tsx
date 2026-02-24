@@ -36,12 +36,12 @@ const iconMap: Record<string, React.ReactNode> = {
 export default function BenefitCard({ icon, title, description, index }: BenefitCardProps) {
   return (
     <AnimateOnScroll delay={index * 100}>
-      <div className="flex items-start gap-5 rounded-xl bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md">
-        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+      <div className="flex items-start gap-5 rounded-xl border border-neutral-200 bg-white p-6 transition-all duration-200 hover:border-primary-200 hover:shadow-md">
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary-50 text-primary-700">
           {iconMap[icon] || iconMap.shield}
         </div>
         <div>
-          <h3 className="font-heading text-lg font-bold text-primary-800">
+          <h3 className="font-heading text-lg font-bold text-neutral-900">
             {title}
           </h3>
           <p className="mt-1 text-sm leading-relaxed text-neutral-600">

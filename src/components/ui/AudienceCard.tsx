@@ -41,11 +41,11 @@ const iconMap: Record<string, React.ReactNode> = {
 export default function AudienceCard({ icon, title, description, index }: AudienceCardProps) {
   return (
     <AnimateOnScroll delay={index * 100}>
-      <div className="rounded-2xl bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-        <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+      <div className="rounded-xl border border-neutral-200 bg-white p-6 text-center transition-all duration-200 hover:border-primary-200 hover:shadow-md">
+        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-50 text-primary-700">
           {iconMap[icon] || iconMap.users}
         </div>
-        <h3 className="font-heading text-lg font-bold text-primary-800">
+        <h3 className="font-heading text-lg font-bold text-neutral-900">
           {title}
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-neutral-600">

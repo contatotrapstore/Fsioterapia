@@ -5,32 +5,28 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-primary-900"
     >
-      {/* Background - gradient placeholder (substituir por imagem real) */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700" />
-
-      {/* Decorative pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 h-72 w-72 rounded-full bg-white blur-3xl" />
-        <div className="absolute bottom-20 right-10 h-96 w-96 rounded-full bg-primary-300 blur-3xl" />
-      </div>
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-primary-950/80 via-primary-900/60 to-primary-900" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-4xl px-4 py-32 text-center sm:px-6">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-300">
+      <div className="relative z-10 mx-auto max-w-3xl px-4 py-32 text-center sm:px-6">
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/80 backdrop-blur-sm">
+          <span className="h-2 w-2 rounded-full bg-primary-400" />
           {SITE_CONFIG.title}
-        </p>
+        </div>
 
         <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-          Fisioterapia Domiciliar{' '}
-          <span className="text-primary-300">Humanizada</span>
+          Fisioterapia Domiciliar
+          <br />
+          <span className="text-white/90">Humanizada</span>
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-100 sm:text-xl">
-          Sou <strong>{SITE_CONFIG.name}</strong>, fisioterapeuta especializada
-          em atendimento domiciliar. Reabilitação, mobilidade e qualidade de
-          vida no conforto do seu lar.
+        <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/70 sm:text-xl">
+          Sou <strong className="text-white">{SITE_CONFIG.name}</strong>,
+          fisioterapeuta especializada em atendimento domiciliar.
+          Reabilitação, mobilidade e qualidade de vida no conforto do seu lar.
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -43,8 +39,8 @@ export default function Hero() {
           </Button>
         </div>
 
-        {/* Trust badges */}
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-primary-300">
+        {/* Trust line */}
+        <div className="mt-16 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-white/50">
           <span className="flex items-center gap-2">
             <CheckIcon />
             Atendimento humanizado
@@ -58,23 +54,6 @@ export default function Hero() {
             {SITE_CONFIG.city} e região
           </span>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <svg
-          className="h-6 w-6 text-white/50"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={2}
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
-          />
-        </svg>
       </div>
     </section>
   );
@@ -90,18 +69,8 @@ function WhatsAppIcon() {
 
 function CheckIcon() {
   return (
-    <svg
-      className="h-4 w-4"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={2.5}
-      stroke="currentColor"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-      />
+    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
     </svg>
   );
 }

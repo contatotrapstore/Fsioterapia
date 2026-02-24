@@ -6,7 +6,7 @@ export default function WhatsAppButton() {
       href={SITE_CONFIG.whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-whatsapp text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-whatsapp-dark hover:shadow-xl animate-pulse-soft"
+      className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-whatsapp text-white shadow-lg transition-all duration-200 hover:scale-110 hover:bg-whatsapp-dark"
       aria-label="Fale conosco pelo WhatsApp"
     >
       <svg className="h-7 w-7" viewBox="0 0 24 24" fill="currentColor">

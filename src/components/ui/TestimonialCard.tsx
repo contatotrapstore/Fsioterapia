@@ -14,7 +14,7 @@ export default function TestimonialCard({
 }: TestimonialCardProps) {
   return (
     <AnimateOnScroll delay={index * 150}>
-      <div className="flex h-full flex-col rounded-2xl bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-md">
+      <div className="flex h-full flex-col rounded-xl border border-neutral-200 bg-white p-8 transition-all duration-200 hover:border-primary-200 hover:shadow-md">
         {/* Stars */}
         <div className="mb-4 flex gap-1">
           {Array.from({ length: 5 }).map((_, i) => (

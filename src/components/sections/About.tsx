@@ -5,18 +5,18 @@ import { SITE_CONFIG } from '@/lib/constants';
 
 export default function About() {
   return (
-    <section id="sobre" className="py-16 md:py-20 lg:py-24 bg-white">
+    <section id="sobre" className="py-20 md:py-24 lg:py-28 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 md:grid-cols-2 lg:gap-16">
-          {/* Photo placeholder */}
+          {/* Photo */}
           <AnimateOnScroll>
-            <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden rounded-2xl bg-primary-100 shadow-xl">
-              {/* TODO: Substituir pela foto real da Kelly */}
+            <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden rounded-xl bg-neutral-100 shadow-md">
+              {/* TODO: Substituir pela foto real da Kelly com next/image */}
               <div className="flex h-full items-center justify-center">
                 <div className="text-center p-8">
-                  <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-primary-200">
+                  <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-neutral-200">
                     <svg
-                      className="h-12 w-12 text-primary-600"
+                      className="h-10 w-10 text-neutral-400"
                       fill="none"
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
@@ -29,13 +29,11 @@ export default function About() {
                       />
                     </svg>
                   </div>
-                  <p className="text-sm text-primary-600">
+                  <p className="text-sm text-neutral-400">
                     Foto da profissional
                   </p>
                 </div>
               </div>
-              {/* Decorative accent */}
-              <div className="absolute -bottom-4 -right-4 h-full w-full rounded-2xl border-2 border-primary-300 -z-10" />
             </div>
           </AnimateOnScroll>
 
@@ -43,14 +41,14 @@ export default function About() {
           <AnimateOnScroll delay={200}>
             <SectionHeading
               title="Sobre Mim"
-              subtitle="Conheça a profissional por trás do cuidado"
+              subtitle="Conheça a profissional"
               centered={false}
             />
 
             <div className="space-y-4 text-neutral-600 leading-relaxed">
               {/* TODO: Substituir pelo conteúdo real do site Wix */}
               <p>
-                Sou <strong className="text-primary-800">{SITE_CONFIG.name}</strong>,
+                Sou <strong className="text-neutral-900">{SITE_CONFIG.name}</strong>,
                 fisioterapeuta formada com registro no{' '}
                 <strong>{SITE_CONFIG.crefito}</strong>. Dedico minha carreira ao
                 atendimento domiciliar, levando tratamento especializado e
@@ -63,7 +61,7 @@ export default function About() {
                 na segurança do seu próprio lar.
               </p>
               <p>
-                <strong className="text-primary-800">Especialidades:</strong>{' '}
+                <strong className="text-neutral-900">Especialidades:</strong>{' '}
                 reabilitação motora, fisioterapia geriátrica, pós-operatório
                 ortopédico, fisioterapia neurológica e exercícios terapêuticos
                 personalizados.
