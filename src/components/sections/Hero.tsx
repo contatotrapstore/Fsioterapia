@@ -68,8 +68,8 @@ export default function Hero() {
               <div className="space-y-4">
                 <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border-2 border-white/10">
                   <Image
-                    src="/images/fisioterapia-idoso.jpg"
-                    alt="Fisioterapia domiciliar com idoso"
+                    src="/images/kelly-portrait.avif"
+                    alt="Dra. Kelly Tina Peretti - Fisioterapeuta"
                     fill
                     className="object-cover"
                     sizes="200px"

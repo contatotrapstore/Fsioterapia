@@ -13,7 +13,7 @@ export default function About() {
           <AnimateOnScroll>
             <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-2xl shadow-md">
               <Image
-                src="/images/kelly-portrait.avif"
+                src="/images/kelly-hero.avif"
                 alt={`Dra. ${SITE_CONFIG.name} - Fisioterapeuta`}
                 fill
                 className="object-cover"
