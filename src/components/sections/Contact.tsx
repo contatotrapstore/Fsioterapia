@@ -1,0 +1,217 @@
+'use client';
+
+import { useState } from 'react';
+import SectionHeading from '@/components/ui/SectionHeading';
+import Button from '@/components/ui/Button';
+import AnimateOnScroll from '@/components/ui/AnimateOnScroll';
+import { SITE_CONFIG } from '@/lib/constants';
+
+export default function Contact() {
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const text = encodeURIComponent(
+      `Olá Kelly, meu nome é ${name}. Meu telefone: ${phone}. ${message}`
+    );
+    window.open(
+      `https://api.whatsapp.com/send?phone=${SITE_CONFIG.whatsappNumber}&text=${text}`,
+      '_blank'
+    );
+  };
+
+  return (
+    <section id="contato" className="py-16 md:py-20 lg:py-24 bg-primary-900">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <SectionHeading
+          title="Entre em Contato"
+          subtitle="Agende sua avaliação ou tire suas dúvidas"
+          light
+        />
+
+        <div className="mx-auto grid max-w-5xl gap-12 md:grid-cols-2">
+          {/* Contact Info */}
+          <AnimateOnScroll>
+            <div className="space-y-8">
+              <div>
+                <h3 className="font-heading text-xl font-bold text-white">
+                  Fale Comigo
+                </h3>
+                <p className="mt-2 text-primary-200 leading-relaxed">
+                  Agende sua avaliação fisioterapêutica domiciliar. Estou à
+                  disposição para esclarecer suas dúvidas.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <ContactItem
+                  icon="whatsapp"
+                  label="WhatsApp"
+                  value={SITE_CONFIG.phone}
+                  href={SITE_CONFIG.whatsappUrl}
+                />
+                <ContactItem
+                  icon="phone"
+                  label="Telefone"
+                  value={SITE_CONFIG.phone}
+                  href={`tel:${SITE_CONFIG.phone.replace(/\D/g, '')}`}
+                />
+                <ContactItem
+                  icon="clock"
+                  label="Horário"
+                  value={SITE_CONFIG.workingHours}
+                />
+                <ContactItem
+                  icon="map"
+                  label="Atendimento"
+                  value={`${SITE_CONFIG.city}, ${SITE_CONFIG.state}`}
+                />
+              </div>
+            </div>
+          </AnimateOnScroll>
+
+          {/* Form */}
+          <AnimateOnScroll delay={200}>
+            <form
+              onSubmit={handleSubmit}
+              className="rounded-2xl bg-white p-8 shadow-xl"
+            >
+              <h3 className="mb-6 font-heading text-xl font-bold text-primary-800">
+                Envie uma Mensagem
+              </h3>
+
+              <div className="space-y-4">
+                <div>
+                  <label
+                    htmlFor="contact-name"
+                    className="mb-1 block text-sm font-medium text-neutral-700"
+                  >
+                    Nome
+                  </label>
+                  <input
+                    id="contact-name"
+                    type="text"
+                    required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Seu nome completo"
+                    className="w-full rounded-lg border border-neutral-300 px-4 py-3 text-neutral-800 transition-colors placeholder:text-neutral-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="contact-phone"
+                    className="mb-1 block text-sm font-medium text-neutral-700"
+                  >
+                    Telefone
+                  </label>
+                  <input
+                    id="contact-phone"
+                    type="tel"
+                    required
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    placeholder="(00) 00000-0000"
+                    className="w-full rounded-lg border border-neutral-300 px-4 py-3 text-neutral-800 transition-colors placeholder:text-neutral-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="contact-message"
+                    className="mb-1 block text-sm font-medium text-neutral-700"
+                  >
+                    Mensagem
+                  </label>
+                  <textarea
+                    id="contact-message"
+                    rows={4}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    placeholder="Como posso ajudar você?"
+                    className="w-full resize-none rounded-lg border border-neutral-300 px-4 py-3 text-neutral-800 transition-colors placeholder:text-neutral-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20"
+                  />
+                </div>
+              </div>
+
+              <Button
+                type="submit"
+                variant="whatsapp"
+                size="lg"
+                className="mt-6 w-full"
+              >
+                Enviar pelo WhatsApp
+              </Button>
+            </form>
+          </AnimateOnScroll>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ContactItem({
+  icon,
+  label,
+  value,
+  href,
+}: {
+  icon: string;
+  label: string;
+  value: string;
+  href?: string;
+}) {
+  const icons: Record<string, React.ReactNode> = {
+    whatsapp: (
+      <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      </svg>
+    ),
+    phone: (
+      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+      </svg>
+    ),
+    clock: (
+      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    map: (
+      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+      </svg>
+    ),
+  };
+
+  const content = (
+    <div className="flex items-start gap-4">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary-800 text-primary-300">
+        {icons[icon]}
+      </div>
+      <div>
+        <p className="text-sm text-primary-400">{label}</p>
+        <p className="font-medium text-white">{value}</p>
+      </div>
+    </div>
+  );
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target={href.startsWith('http') ? '_blank' : undefined}
+        rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+        className="block rounded-lg transition-colors hover:bg-primary-800/50 p-2 -m-2"
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return <div className="p-2 -m-2">{content}</div>;
+}
