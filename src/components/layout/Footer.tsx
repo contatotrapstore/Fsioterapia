@@ -17,7 +17,7 @@ export default function Footer() {
                 alt="Dra. Kelly Cristina Peretti"
                 width={180}
                 height={56}
-                className="h-14 w-auto brightness-0 invert"
+                className="h-14 w-auto invert"
                 unoptimized
               />
             </div>

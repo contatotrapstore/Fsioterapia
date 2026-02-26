@@ -39,7 +39,7 @@ export default function Header() {
               height={70}
               className={clsx(
                 'h-16 w-auto transition-all duration-300',
-                isScrolled ? '' : 'brightness-0 invert'
+                isScrolled ? '' : 'invert'
               )}
               priority
               unoptimized
