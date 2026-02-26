@@ -35,13 +35,14 @@ export default function Header() {
             <Image
               src="/images/logo-kelly.png"
               alt="Dra. Kelly Cristina Peretti - Fisioterapia Domiciliar"
-              width={140}
-              height={48}
+              width={180}
+              height={56}
               className={clsx(
-                'h-12 w-auto transition-all duration-300',
-                !isScrolled && 'brightness-0 invert'
+                'h-14 w-auto transition-all duration-300',
+                !isScrolled && 'invert drop-shadow-[0_0_1px_rgba(255,255,255,0.3)]'
               )}
               priority
+              unoptimized
             />
           </a>
 

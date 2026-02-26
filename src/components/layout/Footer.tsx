@@ -15,9 +15,10 @@ export default function Footer() {
               <Image
                 src="/images/logo-kelly.png"
                 alt="Dra. Kelly Cristina Peretti"
-                width={120}
-                height={40}
-                className="h-10 w-auto brightness-0 invert"
+                width={140}
+                height={48}
+                className="h-12 w-auto invert"
+                unoptimized
               />
             </div>
             <p className="mt-1 text-sm text-primary-300">{SITE_CONFIG.title}</p>
