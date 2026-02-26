@@ -15,9 +15,9 @@ export default function Footer() {
               <Image
                 src="/images/logo-kelly.png"
                 alt="Dra. Kelly Cristina Peretti"
-                width={140}
-                height={48}
-                className="h-12 w-auto invert"
+                width={180}
+                height={56}
+                className="h-14 w-auto brightness-0 invert"
                 unoptimized
               />
             </div>

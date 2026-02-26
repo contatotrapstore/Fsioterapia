@@ -31,15 +31,15 @@ export default function Header() {
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
           {/* Logo / Brand */}
-          <a href="#hero" className="flex items-center gap-2">
+          <a href="#hero" className="flex items-center">
             <Image
               src="/images/logo-kelly.png"
               alt="Dra. Kelly Cristina Peretti - Fisioterapia Domiciliar"
-              width={180}
-              height={56}
+              width={220}
+              height={70}
               className={clsx(
-                'h-14 w-auto transition-all duration-300',
-                !isScrolled && 'invert drop-shadow-[0_0_1px_rgba(255,255,255,0.3)]'
+                'h-16 w-auto transition-all duration-300',
+                isScrolled ? '' : 'brightness-0 invert'
               )}
               priority
               unoptimized
