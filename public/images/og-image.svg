@@ -1,25 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#14532d"/>
-      <stop offset="100%" style="stop-color:#166534"/>
+      <stop offset="0%" style="stop-color:#042f2e"/>
+      <stop offset="100%" style="stop-color:#115e59"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <circle cx="200" cy="200" r="150" fill="#15803d" opacity="0.3"/>
-  <circle cx="1000" cy="450" r="200" fill="#22c55e" opacity="0.15"/>
+  <circle cx="200" cy="200" r="150" fill="#0f766e" opacity="0.3"/>
+  <circle cx="1000" cy="450" r="200" fill="#14b8a6" opacity="0.15"/>
   <!-- Cross icon -->
-  <rect x="565" y="140" width="70" height="12" rx="6" fill="#86efac"/>
-  <rect x="594" y="111" width="12" height="70" rx="6" fill="#86efac"/>
+  <rect x="565" y="140" width="70" height="12" rx="6" fill="#5eead4"/>
+  <rect x="594" y="111" width="12" height="70" rx="6" fill="#5eead4"/>
   <!-- Name -->
-  <text x="600" y="280" text-anchor="middle" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white">Kelly Tina Peretti</text>
+  <text x="600" y="280" text-anchor="middle" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white">Kelly Cristina Peretti</text>
   <!-- Title -->
-  <text x="600" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#86efac">Fisioterapeuta Domiciliar</text>
+  <text x="600" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#5eead4">Fisioterapeuta Domiciliar</text>
   <!-- Divider -->
-  <rect x="500" y="370" width="200" height="3" rx="1.5" fill="#22c55e"/>
+  <rect x="500" y="370" width="200" height="3" rx="1.5" fill="#14b8a6"/>
   <!-- Tagline -->
-  <text x="600" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#dcfce7">Cuidado humanizado no conforto do seu lar</text>
+  <text x="600" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#ccfbf1">Cuidado humanizado no conforto do seu lar</text>
   <!-- Bottom badge -->
-  <rect x="440" y="480" width="320" height="50" rx="25" fill="#22c55e" opacity="0.2"/>
-  <text x="600" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#4ade80">Agende pelo WhatsApp</text>
+  <rect x="440" y="480" width="320" height="50" rx="25" fill="#14b8a6" opacity="0.2"/>
+  <text x="600" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2dd4bf">Agende pelo WhatsApp</text>
 </svg>
