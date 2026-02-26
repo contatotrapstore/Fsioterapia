@@ -11,15 +11,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               <Image
-                src="/images/logo.png"
-                alt="KC Fisioterapia"
-                width={36}
-                height={36}
-                className="h-9 w-auto brightness-0 invert"
+                src="/images/logo-kelly.png"
+                alt="Dra. Kelly Cristina Peretti"
+                width={120}
+                height={40}
+                className="h-10 w-auto brightness-0 invert"
               />
-              <h3 className="font-heading text-xl font-bold">Dra. {SITE_CONFIG.name}</h3>
             </div>
             <p className="mt-1 text-sm text-primary-300">{SITE_CONFIG.title}</p>
             <p className="mt-1 text-xs text-primary-400">{SITE_CONFIG.crefito}</p>

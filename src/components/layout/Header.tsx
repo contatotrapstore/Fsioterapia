@@ -31,25 +31,18 @@ export default function Header() {
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
           {/* Logo / Brand */}
-          <a href="#hero" className="flex items-center gap-3">
+          <a href="#hero" className="flex items-center gap-2">
             <Image
-              src="/images/logo.png"
-              alt="KC Fisioterapia Domiciliar"
-              width={40}
-              height={40}
+              src="/images/logo-kelly.png"
+              alt="Dra. Kelly Cristina Peretti - Fisioterapia Domiciliar"
+              width={140}
+              height={48}
               className={clsx(
-                'h-10 w-auto transition-all duration-300',
+                'h-12 w-auto transition-all duration-300',
                 !isScrolled && 'brightness-0 invert'
               )}
+              priority
             />
-            <span
-              className={clsx(
-                'hidden font-heading text-lg font-bold transition-colors duration-300 sm:block',
-                isScrolled ? 'text-primary-800' : 'text-white'
-              )}
-            >
-              {SITE_CONFIG.name}
-            </span>
           </a>
 
           {/* Desktop Navigation */}
