@@ -1,5 +1,5 @@
 export const SITE_CONFIG = {
-  name: 'Kelly Cristina Peretti',
+  name: 'Kelly Caldeira',
   title: 'Fisioterapeuta Domiciliar',
   phone: '(41) 99611-1891',
   whatsappNumber: '5541996111891',

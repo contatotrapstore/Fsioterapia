@@ -12,7 +12,7 @@
   <rect x="565" y="140" width="70" height="12" rx="6" fill="#5eead4"/>
   <rect x="594" y="111" width="12" height="70" rx="6" fill="#5eead4"/>
   <!-- Name -->
-  <text x="600" y="280" text-anchor="middle" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white">Kelly Cristina Peretti</text>
+  <text x="600" y="280" text-anchor="middle" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white">Kelly Caldeira</text>
   <!-- Title -->
   <text x="600" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#5eead4">Fisioterapeuta Domiciliar</text>
   <!-- Divider -->

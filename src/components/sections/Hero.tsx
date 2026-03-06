@@ -69,7 +69,7 @@ export default function Hero() {
                 <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border-2 border-white/10">
                   <Image
                     src="/images/kelly-portrait.avif"
-                    alt="Dra. Kelly Cristina Peretti - Fisioterapeuta"
+                    alt="Dra. Kelly Caldeira - Fisioterapeuta"
                     fill
                     className="object-cover"
                     sizes="200px"

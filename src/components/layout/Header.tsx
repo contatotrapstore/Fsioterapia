@@ -34,7 +34,7 @@ export default function Header() {
           <a href="#hero" className="flex items-center">
             <Image
               src="/images/logo-kelly.png"
-              alt="Dra. Kelly Cristina Peretti - Fisioterapia Domiciliar"
+              alt="Dra. Kelly Caldeira - Fisioterapia Domiciliar"
               width={320}
               height={90}
               className={clsx(

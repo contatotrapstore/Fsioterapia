@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               <Image
                 src="/images/logo-kelly.png"
-                alt="Dra. Kelly Cristina Peretti"
+                alt="Dra. Kelly Caldeira"
                 width={180}
                 height={56}
                 className="h-14 w-auto invert"
